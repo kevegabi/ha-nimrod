@@ -1,0 +1,6 @@
+{
+    "name": "Nimrod-messenger notifier",
+    "country": "HU",
+    "render_readme": "True",
+    "iot_class": "Cloud Polling"
+}
