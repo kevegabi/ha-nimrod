@@ -1,0 +1,1 @@
+"""The Nimrod-Messenger notfier component"""

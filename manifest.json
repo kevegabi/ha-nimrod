@@ -1,0 +1,6 @@
+{
+    "domain": "nimrod",
+    "name": "Nimrod-messenger notifcatione",
+    "dependencies": [],
+    "codeowners": ["@kevegabi"]
+}
