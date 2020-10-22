@@ -40,5 +40,5 @@ action:
     message: "The sun is {% if is_state('sun.sun', 'above_horizon') %}up{% else %}down{% endif %}!"
 ```
 ## Copyright
-Nimrod-messanger copyright © xureiLab
-Nimrod-messenger HA integration copyright © @kevegabi
+- Nimrod-messanger copyright © xureiLab
+- Nimrod-messenger HA integration copyright © kevegabi
