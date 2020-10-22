@@ -17,6 +17,7 @@ notify:
   - name: "Nimrod-messenger"
     platform: nimrod
     api_key: "your-api-key"
+```
 
 ## Home Assistant usage example:
 Simple example, for sun down / shine notification.
@@ -25,3 +26,4 @@ action:
   service: notify.nimrod-messanger
   data:
     message: "The sun is {% if is_state('sun.sun', 'above_horizon') %}up{% else %}down{% endif %}!"
+```
