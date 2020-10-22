@@ -23,7 +23,7 @@ notify:
 Simple example, for sun down / shine notification.
 ```yaml
 action:
-  service: notify.nimrod-messanger
+  service: notify.nimrod_messenger
   data:
     message: "The sun is {% if is_state('sun.sun', 'above_horizon') %}up{% else %}down{% endif %}!"
 ```
