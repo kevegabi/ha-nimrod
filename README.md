@@ -3,12 +3,23 @@
 
 =========================
 ## Table of contents:
-- [How to get api-key](#how-to-get-api-key)
+- [How to install](#how-to-install)
+- [How to get API key](#how-to-get-api-key)
 - [Home Assistant configuration](#home-assinstant-configuration)
 - [Home Assistant usage example](#home-assistant-usage-example)
 
 ------------
-## How to get api-key
+
+## How to install
+- Install [HACS installer](https://hacs.xyz/docs/installation/manual) on your Home Assistant.
+- Click to the Integration menu
+- Click the three point in the upper right corder, and select Custom Repositories
+- Insert this [link](https://github.com/kevegabi/ha-nimrod/) to the 'Add custom repository URL', and select 'Integration' from the Category popup
+- Click to Add button
+- Click to the '+' sign in the bottm right corner, and find the Nimrod-messenger component. Click to the 'Install this repository in HACS'
+- Enjoy
+
+## How to get API key
 You must obtain an API key before using this notify component. The easiest way: Let's conversating with [Nimrod-messenger](https://m.me/251459615313202) here. The easy way: follow this [instruction](https://www.nimrod-messenger.io/).
 
 ## Home Assistant configuration:
