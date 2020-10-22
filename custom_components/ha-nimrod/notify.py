@@ -39,30 +39,15 @@ class NimrodNotificationService(BaseNotificationService):
 
     def send_message(self, message="", **kwargs):
         """Send some message."""
-        payload = {"api_key": self.page_api_key}
         data = kwargs.get(ATTR_DATA)
 
-        body_message = {"text": message}
-
         if data is not None:
-            body_message.update(data)
-            # Only one of text or attachment can be specified
-            if "attachment" in body_message:
-                body_message.pop("text")
 
-            body = {
-                "message": body_message,
-                "api_key": self.page_api_key
-            }
-            resp = requests.post(
-                BASE_URL,
-                data=json.dumps(body),
-                params=payload,
-                headers={CONTENT_TYPE: CONTENT_TYPE_JSON},
-                timeout=10,
-            )
+            headers = {'Content-type': 'application/json', 'Authorization': 'Bearer ' + self.access_token}
 
-            log_error(json.dumps(body))
+            data = {'message': message, 'api_key': self.page_api_key}
+
+            resp = requests.post(BASE_URL, data=json.dumps(data), headers=headers)
 
             if resp.status_code != HTTP_OK:
                 log_error(resp)
