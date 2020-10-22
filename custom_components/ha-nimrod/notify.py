@@ -39,8 +39,8 @@ class NimrodNotificationService(BaseNotificationService):
 
     def send_message(self, message="", **kwargs):
         """Send some message."""
-        
-        headers = {'Content-type': 'application/json', 'Authorization': 'Bearer ' + self.access_token}
+
+        headers = {'Content-type': 'application/json' }
 
         nimrod_message = {'message': message, 'api_key': self.page_api_key}
 
