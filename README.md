@@ -7,6 +7,7 @@
 - [How to get API key](#how-to-get-api-key)
 - [Home Assistant configuration](#home-assinstant-configuration)
 - [Home Assistant usage example](#home-assistant-usage-example)
+- [Copyright](#copyright)
 
 ------------
 
@@ -38,3 +39,6 @@ action:
   data:
     message: "The sun is {% if is_state('sun.sun', 'above_horizon') %}up{% else %}down{% endif %}!"
 ```
+## Copyright
+Nimrod-messanger copyright © xureiLab
+Nimrod-messenger HA integration copyright © @kevegabi
