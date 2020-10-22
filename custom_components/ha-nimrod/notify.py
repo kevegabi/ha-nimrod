@@ -40,7 +40,6 @@ class NimrodNotificationService(BaseNotificationService):
     def send_message(self, message="", **kwargs):
         """Send some message."""
         payload = {"api_key": self.page_api_key}
-        targets = kwargs.get(ATTR_TARGET)
         data = kwargs.get(ATTR_DATA)
 
         body_message = {"text": message}
@@ -53,6 +52,7 @@ class NimrodNotificationService(BaseNotificationService):
 
             body = {
                 "message": body_message,
+                "api_key": self.page_api_key
             }
             resp = requests.post(
                 BASE_URL,
@@ -61,6 +61,9 @@ class NimrodNotificationService(BaseNotificationService):
                 headers={CONTENT_TYPE: CONTENT_TYPE_JSON},
                 timeout=10,
             )
+
+            log_error(json.dumps(body))
+
             if resp.status_code != HTTP_OK:
                 log_error(resp)
 
