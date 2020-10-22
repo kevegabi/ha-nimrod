@@ -1,5 +1,5 @@
 # Home Assistant - Nimrod-messenger.io integration
-[Nimrod-Messenger](https://https://www.nimrod-messenger.io/) integration [Home Assistant](https://www.home-assistant.io/)
+This is a simple [Nimrod-Messenger](https://https://www.nimrod-messenger.io/) integration for [Home Assistant](https://www.home-assistant.io/). Currently only text message supported...
 
 ------------
 
