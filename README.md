@@ -8,12 +8,11 @@
 
 ------------
 ## How to get api-key
-
-Let's conversating with [Nimrod-messenger](https://m.me/251459615313202), or follow this [instruction](https://www.nimrod-messenger.io/).
+You must obtain an API key before using this notify component. The easiest way: Let's conversating with [Nimrod-messenger](https://m.me/251459615313202) here. The easy way: follow this [instruction](https://www.nimrod-messenger.io/).
 
 ## Home Assistant usage:
 ```yaml
 notify:
   - name: "Nimrod-messenger"
     platform: nimrod
-    api_key: your-api-key
+    api_key: "your-api-key"
