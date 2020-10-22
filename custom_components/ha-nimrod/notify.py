@@ -17,7 +17,7 @@ import homeassistant.helpers.config_validation as cv
 
 _LOGGER = logging.getLogger(__name__)
 
-CONF_API_KEY = "api-key"
+CONF_API_KEY = "api_key"
 BASE_URL = "https://www.nimrod-messenger.io/api/v1/message"
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
@@ -39,7 +39,7 @@ class NimrodNotificationService(BaseNotificationService):
 
     def send_message(self, message="", **kwargs):
         """Send some message."""
-        payload = {"spi-key": self.page_api_key}
+        payload = {"api_key": self.page_api_key}
         targets = kwargs.get(ATTR_TARGET)
         data = kwargs.get(ATTR_DATA)
 
@@ -50,10 +50,6 @@ class NimrodNotificationService(BaseNotificationService):
             # Only one of text or attachment can be specified
             if "attachment" in body_message:
                 body_message.pop("text")
-
-        if not targets:
-            _LOGGER.error("At least 1 target is required")
-            return
 
             body = {
                 "message": body_message,
