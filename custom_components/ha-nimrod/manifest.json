@@ -1,6 +1,13 @@
 {
-    "domain": "nimrod",
+    "domain": "nimrod-ha",
     "name": "Nimrod-messenger notifcatione",
+    "documentation": "https://github.com/kevegabi/ha-nimrod",
+    "issue_tracker": "https://github.com/kevegabi/ha-nimrod/issues",
     "dependencies": [],
-    "codeowners": ["@kevegabi"]
+    "codeowners": ["@kevegabi"],
+    "config_flow": false,
+    "ssdp": [],
+    "zeroconf": [],
+    "homekit": {},
+    "iot_class": "Cloud Polling"
 }
