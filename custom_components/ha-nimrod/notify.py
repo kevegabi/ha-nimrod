@@ -1,4 +1,5 @@
 """Nimrod-messenger platform for notify component."""
+from http import HTTPStatus
 import json
 import logging
 
@@ -12,7 +13,7 @@ from homeassistant.components.notify import (
     PLATFORM_SCHEMA,
     BaseNotificationService,
 )
-from homeassistant.const import CONTENT_TYPE_JSON, HTTP_OK
+from homeassistant.const import CONTENT_TYPE_JSON
 import homeassistant.helpers.config_validation as cv
 
 _LOGGER = logging.getLogger(__name__)
@@ -46,7 +47,7 @@ class NimrodNotificationService(BaseNotificationService):
 
         resp = requests.post(BASE_URL, data=json.dumps(nimrod_message), headers=headers)
 
-        if resp.status_code != HTTP_OK:
+        if resp.status_code != HTTPStatus.OK:
             log_error(resp)
 
 
