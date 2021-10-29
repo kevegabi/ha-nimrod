@@ -9,5 +9,6 @@
     "ssdp": [],
     "zeroconf": [],
     "homekit": {},
-    "iot_class": "Cloud Polling"
+    "iot_class": "Cloud Polling",
+    "version": "0.4.1"
 }
